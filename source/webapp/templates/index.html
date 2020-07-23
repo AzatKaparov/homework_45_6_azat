@@ -12,11 +12,11 @@
 <body>
 <div class="container">
     <h1>Задачи:</h1>
-    <p><a href="/task/add/">Добавить задачу</a></p>
-    {% for task in tasks %}
-        <h3>{{ task.pk }}</h3>
-        <p>Статус: ({{ task.status }} | {{ task.get_status_display }})</p>
-        <p>{{ task.date }}</p>
+    <p><a href="/tasks/add/">Добавить задачу</a></p>
+    {% for i in tasks %}
+        <h3>{{ i.pk }}  {{ i.description }}</h3>
+        <p>Статус: {{ i.get_status_display }}</p>
+        <p>{{ i.date }}</p>
     {% endfor %}
     <p><a href="/tasks/add/">Добавить задачу</a></p>
 </div>
