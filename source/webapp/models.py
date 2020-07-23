@@ -10,7 +10,7 @@ STATUS_CHOICES = [
 class Task(models.Model):
     description = models.TextField(max_length=500, null=False, verbose_name='Описание')
     status = models.CharField(max_length=50, choices=STATUS_CHOICES, null=False, default='new', verbose_name='Статус')
-    date = models.DateTimeField(auto_now_add=True, null=True, default=None, verbose_name='Дата выполнения (ГГГГ-ММ-ДД)')
+    date = models.DateField(null=True, default=None, verbose_name='Дата выполнения (ГГГГ-ММ-ДД)')
 
     def __str__(self):
         return "{}. {}".format(self.pk, self.description)
