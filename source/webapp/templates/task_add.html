@@ -10,18 +10,19 @@
     <link rel="stylesheet" href="{% static 'css/add.css' %}">
 </head>
 <body>
+<div class="container">
 <a href="/">На главную</a>
-<h1>Create Article</h1>
+<h1>Добавить задачу</h1>
 
 <form action="/tasks/add/" method="post">
     {% csrf_token %}
-    <label>Description</label><br/>
+    <label>Описание</label><br/>
     <input type="text" name="description"/><br/>
 
-    <label>Date</label><br/>
+    <label>Дата (ГГГГ-ММ-ДД)</label><br/>
     <input type="text" name="date"/><br/>
 
-    <label for="id-status">Status:</label><br/>
+    <label for="id-status">Статус:</label><br/>
     <select name="status" id="id-status">
         {% for value, label in status_choices %}
             <option value="{{ value }}">{{ label }}</option>
@@ -30,5 +31,6 @@
     <br/>
     <input type="submit" value="Send"/>
 </form>
+</div>
 </body>
 </html>

@@ -3,11 +3,7 @@ from webapp.models import Task, STATUS_CHOICES
 
 
 def index_view(request):
-    is_admin = request.GET.get('is_admin', None)
-    if is_admin:
-        data = Task.objects.all()
-    else:
-        data = Task.objects.filter(status='moderated')
+    data = Task.objects.all()
     return render(request, 'index.html', context={
         'tasks': data
     })
@@ -19,9 +15,9 @@ def task_add_view(request):
             'status_choices': STATUS_CHOICES
         })
     elif request.method == 'POST':
-        description = request.POST.get('title')
+        description = request.POST.get('description')
         status = request.POST.get('status')
-        date = request.POST.get('status')
-        task = Task.objects.create(description=description, status=status, date= date)
-        context = {'article': task}
+        date = request.POST.get('date')
+        task = Task.objects.create(description=description, status=status, date=date)
+        context = {'task': task}
         return render(request, 'task_view.html', context)
