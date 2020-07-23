@@ -1,0 +1,74 @@
+[
+{
+  "model": "webapp.task",
+  "pk": 1,
+  "fields": {
+    "description": "\u0421\u0435\u0441\u0442\u044c \u043d\u0430 \u0441\u0442\u0443\u043b",
+    "status": "new",
+    "date": "2020-08-01"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 2,
+  "fields": {
+    "description": "\u0421\u044a\u0435\u0441\u0442\u044c \u043f\u0438\u0440\u043e\u0436\u043e\u043a",
+    "status": "done",
+    "date": "1999-01-10"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 15,
+  "fields": {
+    "description": "\u041f\u043e\u0434\u0443\u043c\u0430\u0442\u044c",
+    "status": "in_progress",
+    "date": "2020-09-19"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 16,
+  "fields": {
+    "description": "\u0421\u0445\u043e\u0434\u0438\u0442\u044c \u0437\u0430 \u0445\u043b\u0435\u0431\u043e\u043c ",
+    "status": "in_progress",
+    "date": "2020-06-14"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 17,
+  "fields": {
+    "description": "\u041f\u043e\u0447\u0438\u043d\u0438\u0442\u044c \u0441\u0442\u0443\u043b",
+    "status": "done",
+    "date": "1234-12-12"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 18,
+  "fields": {
+    "description": "\u0421\u0434\u0435\u043b\u0430\u0442\u044c \u043a\u0441\u0435\u0440\u043e\u043a\u043e\u043f\u0438\u0438",
+    "status": "done",
+    "date": "2020-10-19"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$exSXIgi3ig8Y$fKWeQ3CEvqYMKfAykpTSFkKJYseksS0ARPwdFadJ1sY=",
+    "last_login": "2020-07-23T09:45:49.206Z",
+    "is_superuser": true,
+    "username": "azat",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-07-23T09:45:27.368Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

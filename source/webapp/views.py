@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from webapp.models import Task, STATUS_CHOICES
+from django.http import HttpResponseRedirect, HttpResponseNotFound
 
 
 def index_view(request):
@@ -21,3 +22,12 @@ def task_add_view(request):
         task = Task.objects.create(description=description, status=status, date=date)
         context = {'task': task}
         return render(request, 'task_view.html', context)
+
+
+def delete(request, id):
+    try:
+        task = Task.objects.get(id=id)
+        task.delete()
+        return HttpResponseRedirect("/")
+    except Task.DoesNotExist:
+        return HttpResponseNotFound("<h2>Task not found</h2>")
